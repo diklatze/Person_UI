@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Add new Person
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!--<person-detail [person]="myPerson"></person-detail>-->
+
+<ion-list padding>
+
+    <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input  [(ngModel)]="myPerson.name"> type="text"></ion-input>
+        
+    </ion-item>
+
+
+    
+
+    <ion-item>
+        <ion-label fixed>Age</ion-label>
+        <ion-input  [(ngModel)]="myPerson.age" type="number" min="0" max="120"></ion-input>
+        
+    </ion-item>
+
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select [(ngModel)]="myPerson.gender">
+                <ion-option>Female</ion-option>
+                <ion-option>Male</ion-option>
+                <ion-option>Other</ion-option>
+
+
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+   
+
+</ion-list>
+
+<button ion-button value="Refresh Page" (click)="postPerson()" onClick="window.location.reload()">Submit</button>
+
+
+</ion-content>

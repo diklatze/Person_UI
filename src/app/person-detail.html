@@ -1,0 +1,41 @@
+<!--<ion-content  padding [style.background]="getStyle()"  >-->
+
+<ion-list padding [style.background]="getStyle()" class="main">
+
+    <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input *ngIf="!person.name"> type="text"></ion-input>
+        <ion-input *ngIf="person.name" placeholder="{{person.name}}"></ion-input>
+    </ion-item>
+
+
+    
+
+    <ion-item>
+        <ion-label fixed>Age</ion-label>
+        <ion-input *ngIf="!person.age"  type="number" min="0" max="120"></ion-input>
+        <ion-input *ngIf="person.age" placeholder="{{person.age}}"></ion-input>
+    </ion-item>
+
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select [(ngModel)]="person.gender">
+                <ion-option>Female</ion-option>
+                <ion-option>Male</ion-option>
+                <ion-option>Other</ion-option>
+
+
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+<!--<button><ion-icon name="ion-close-circled"></ion-icon></button>-->
+    <!--<button (click)="person.gender='none';">Reset style</button>-->
+ <!--<ion-fab right>-->
+    <!--<button ion-fab mini value="Refresh Page" onClick="window.location.reload()"><ion-icon name="close"></ion-icon></button>-->
+  <!--</ion-fab>-->
+
+
+<!--</ion-content>>-->
